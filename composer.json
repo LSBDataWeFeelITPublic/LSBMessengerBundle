@@ -1,7 +1,7 @@
 {
-    "name": "lsb/template-bundle",
+    "name": "lsb/messenger-bundle",
     "type": "symfony-bundle",
-    "description": "LSB [name] bundle",
+    "description": "LSB messenger bundle",
     "license": "MIT",
     "keywords": [
         "symfony"
@@ -10,7 +10,7 @@
     "authors": [
         {
             "name": "LSB DATA",
-            "email": "your-email@lsb.com.pl"
+            "email": "krzysztof.mazur@lsb.com.pl"
         }
     ],
     "require": {
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LSB\\TemplateVendorSF5Bundle\\": ""
+            "LSB\\MessengerBundle\\": ""
         },
         "exclude-from-classmap": [
             "Tests/"
