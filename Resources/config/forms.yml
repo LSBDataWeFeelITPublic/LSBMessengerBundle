@@ -1,0 +1,8 @@
+services:
+    LSB\TemplateVendorSF5Bundle\Form\EntityType:
+        tags:
+            - { name: form.type }
+
+    LSB\TemplateVendorSF5Bundle\Form\EntityTranslationType:
+        tags:
+            - { name: form.type }

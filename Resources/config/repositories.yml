@@ -1,0 +1,5 @@
+services:
+    LSB\TemplateVendorSF5Bundle\Repository\EntityRepository:
+        arguments:
+            - '@doctrine'
+    LSB\TemplateVendorSF5Bundle\Repository\EntityRepositoryInterface: '@LSB\TemplateVendorSF5Bundle\Repository\EntityRepository'
