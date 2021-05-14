@@ -13,7 +13,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class LSBMessengerExtension extends BaseExtension
 {
-    const CONFIG_PREFIX = 'lsb_template';
+    const CONFIG_PREFIX = 'lsb_messenger';
     protected $dir = __DIR__;
 
     /**

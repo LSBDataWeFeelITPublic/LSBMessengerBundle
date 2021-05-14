@@ -3,6 +3,12 @@ declare(strict_types=1);
 
 namespace LSB\MessengerBundle\DependencyInjection;
 
+use LSB\MessengerBundle\Entity\Job;
+use LSB\MessengerBundle\Entity\JobInterface;
+use LSB\MessengerBundle\Factory\JobFactory;
+use LSB\MessengerBundle\Form\JobType;
+use LSB\MessengerBundle\Manager\JobManager;
+use LSB\MessengerBundle\Repository\JobRepository;
 use LSB\UtilityBundle\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -13,7 +19,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-    const CONFIG_KEY = 'lsb_product';
+    const CONFIG_KEY = 'lsb_messenger';
 
     /**
      * {@inheritdoc}
@@ -22,28 +28,24 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder(self::CONFIG_KEY);
 
-//        $treeBuilder
-//            ->getRootNode()
-//            ->children()
-//            ->bundleTranslationDomainScalar(LSBProductBundle::class)->end()
-//            ->resourcesNode()
-//            ->children()
-//            ->resourceNode(
-//                'job',
-//                Product::class,
-//                ProductInterface::class,
-//                ProductFactory::class,
-//                ProductRepository::class,
-//                ProductManager::class,
-//                ProductType::class,
-//                ProductTranslation::class,
-//                ProductTranslationInterface::class,
-//                ProductTranslationType::class
-//            )
-//            ->end()
-//            ->end()
-//            ->end()
-//            ->end();
+        $treeBuilder
+            ->getRootNode()
+            ->children()
+            ->resourcesNode()
+            ->children()
+            ->resourceNode(
+                'job',
+                Job::class,
+                JobInterface::class,
+                JobFactory::class,
+                JobRepository::class,
+                JobManager::class,
+                JobType::class
+            )
+            ->end()
+            ->end()
+            ->end()
+            ->end();
 
         return $treeBuilder;
     }

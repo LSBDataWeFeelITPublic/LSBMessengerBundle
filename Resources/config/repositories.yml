@@ -3,3 +3,8 @@ services:
         arguments:
             - '@doctrine'
     LSB\TemplateVendorSF5Bundle\Repository\EntityRepositoryInterface: '@LSB\TemplateVendorSF5Bundle\Repository\EntityRepository'
+
+    LSB\MessengerBundle\Repository\JobRepository:
+        arguments:
+            - '@doctrine'
+    LSB\MessengerBundle\Repository\JobRepositoryInterface: '@LSB\MessengerBundle\Repository\JobRepository'

@@ -2,3 +2,7 @@ services:
     LSB\TemplateVendorSF5Bundle\Manager\EntityManager:
         arguments:
             - '@lsb_utility_object_manager'
+
+    LSB\MessengerBundle\Manager\JobManager:
+        arguments:
+            - '@lsb_utility_object_manager'

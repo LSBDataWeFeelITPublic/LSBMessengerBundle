@@ -1,8 +1,5 @@
 services:
-    LSB\TemplateVendorSF5Bundle\Form\EntityType:
-        tags:
-            - { name: form.type }
 
-    LSB\TemplateVendorSF5Bundle\Form\EntityTranslationType:
+    LSB\MessengerBundle\Form\JobType:
         tags:
-            - { name: form.type }
+            - {name: form.type}

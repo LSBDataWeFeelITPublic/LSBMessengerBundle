@@ -1,9 +1,7 @@
 services:
-    LSB\TemplateVendorSF5Bundle\Factory\EntityFactory:
-        arguments:
-            - '%lsb_template.config.resources.entity.class.entity%'
 
-    lsb_template_factory_entity:
-        alias: 'LSB\TemplateVendorSF5Bundle\Factory\EntityFactory'
+    LSB\MessengerBundle\Factory\JobFactory: ~
 
-    LSB\TemplateVendorSF5Bundle\Factory\EntityFactoryInterface: '@LSB\TemplateVendorSF5Bundle\Factory\EntityFactory'
+    lsb_product_factory_job:
+        alias: LSB\MessengerBundle\Factory\JobFactory
+    LSB\MessengerBundle\Factory\JobFactoryInterface: '@LSB\MessengerBundle\Factory\JobFactory'
